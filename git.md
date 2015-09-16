@@ -97,8 +97,11 @@ git简易使用
 
 1. 给git版本打tag
 
-        git tag “tag_name”
+        git tag -a v1.6.2 -m "release version 1.6.2" 4c032c2cdec3fdf8d8987b17578d654989ec28c9
 
 1. 将本地tag推送到git库
 
         git push origin “tag name”
+
+1. + git log 本地branch ^远程分支   可以查看本地有远程没有的提交。
+   + git log 远程分子 ^本地branch   可以查看远程有，本地没有的提交。
