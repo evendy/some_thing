@@ -270,7 +270,7 @@ open(fname,[mode],[encoding],[errors],[buf])
 @ fname:文件名字
 @ flag:打开方式
 @ mode
-os.open(fname,flag,[mode])
+fd=os.open(fname,flag,[mode])
 ```
 flag:打开方式
 	* os.O_CREAT : 创建文件
