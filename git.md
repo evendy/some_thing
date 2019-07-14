@@ -49,7 +49,7 @@ git简易使用
  
 1. 切换分支
 
-        git checkout “branchname”\
+        git checkout “branchname”
  
 1. 基于当前分支创建一个新的分支并切换到该分支
 
@@ -105,3 +105,12 @@ git简易使用
 
 1. + git log 本地branch ^远程分支   可以查看本地有远程没有的提交。
    + git log 远程分子 ^本地branch   可以查看远程有，本地没有的提交。
+   
+1. 实际项目开发时需要在开发某个功能时新建分支来进行开发，当功能开发并测试完毕时合并到主分支
+```
+git branch test_branch          //基于当前分支新建分支test_branch
+git checkout test_branch        //切换到该test_branch分支
+...在test_branch分支开发功能并测试完成后提交到功能分支
+git checkout master             //切回主分支master
+git merge orgin/test_branch     //从test_branch分支将功能代码合并到主分支
+```
